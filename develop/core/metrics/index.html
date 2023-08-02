@@ -19,7 +19,7 @@
         <link rel="next" href="../event_handler/api_gateway/">
       
       <link rel="icon" href="../../media/aws-logo-light.svg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
@@ -1382,7 +1382,7 @@
 <span class="w">    </span><span class="nt">Layers</span><span class="p">:</span>
 <span class="w">      </span><span class="c1"># Find the latest Layer version in the official documentation</span>
 <span class="w">      </span><span class="c1"># https://docs.powertools.aws.dev/lambda/python/latest/#lambda-layer</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="kt">!Sub</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">arn:aws:lambda:${AWS::Region}:017000801446:layer:AWSLambdaPowertoolsPythonV2:39</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="kt">!Sub</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">arn:aws:lambda:${AWS::Region}:017000801446:layer:AWSLambdaPowertoolsPythonV2:40</span>
 
 <span class="nt">Resources</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">CaptureLambdaHandlerExample</span><span class="p">:</span>
@@ -2240,6 +2240,7 @@
 <p class="admonition-title">Why not changing the default <code>Metrics</code> behaviour to not share data across instances?</p>
 </div>
 <p>This is an intentional design to prevent accidental data deduplication or data loss issues due to <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Embedded_Metric_Format_Specification.html" target="_blank">CloudWatch EMF</a> metric dimension constraint.</p>
+<!-- markdownlint-disable-next-line MD013 -->
 <p>In CloudWatch, there are two metric ingestion mechanisms: <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Embedded_Metric_Format_Specification.html" target="_blank">EMF (async)</a> and <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/cloudwatch.html#CloudWatch.Client.put_metric_data" target="_blank"><code>PutMetricData</code> API (sync)</a>.</p>
 <p>The former creates metrics asynchronously via CloudWatch Logs, and the latter uses a synchronous and more flexible ingestion API.</p>
 <div class="admonition important">
@@ -2297,7 +2298,7 @@
 </ul>
 <p>For example, <code>Metrics(namespace="ServerlessAirline", service="booking")</code></p>
 </details>
-<p>Make sure to set <code>POWERTOOLS_METRICS_NAMESPACE</code> and <code>POWERTOOLS_SERVICE_NAME</code> before running your tests to prevent failing on <code>SchemaValidation</code> exception. You can set it before you run tests or via pytest plugins like <a href="https://pypi.org/project/pytest-dotenv/" target="_blank">dotenv</a>.</p>
+<p>Make sure to set <code>POWERTOOLS_METRICS_NAMESPACE</code> and <code>POWERTOOLS_SERVICE_NAME</code> before running your tests to prevent failing on <code>SchemaValidation</code> exception. You can set it before you run tests or via pytest plugins like <a href="https://pypi.org/project/pytest-dotenv/" rel="nofollow" target="_blank">dotenv</a>.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Injecting dummy Metric Namespace before running tests</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">POWERTOOLS_SERVICE_NAME</span><span class="o">=</span><span class="s2">&quot;booking&quot;</span><span class="w"> </span><span class="nv">POWERTOOLS_METRICS_NAMESPACE</span><span class="o">=</span><span class="s2">&quot;ServerlessAirline&quot;</span><span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>pytest
 </code></pre></div></td></tr></table></div>
 <h3 id="clearing-metrics">Clearing metrics<a class="headerlink" href="#clearing-metrics" title="Permanent link">&para;</a></h3>
@@ -2493,7 +2494,7 @@
   <small>
     
       Last update:
-      2023-07-12
+      2023-07-28
     
   </small>
 </div>

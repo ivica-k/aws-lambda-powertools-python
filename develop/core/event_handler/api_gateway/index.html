@@ -19,7 +19,7 @@
         <link rel="next" href="../appsync/">
       
       <link rel="icon" href="../../../media/aws-logo-light.svg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
@@ -1611,6 +1611,7 @@
 <p>All examples shared in this documentation are available within the <a href="https://github.com/aws-powertools/powertools-lambda-python/tree/develop/examples" target="_blank">project repository</a>.</p>
 </details>
 <h3 id="required-resources">Required resources<a class="headerlink" href="#required-resources" title="Permanent link">&para;</a></h3>
+<!-- markdownlint-disable-next-line MD013 -->
 <p>If you're using any API Gateway integration, you must have an existing <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html" target="_blank">API Gateway Proxy integration</a> or <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/lambda-functions.html" target="_blank">ALB</a> configured to invoke your Lambda function.</p>
 <p>In case of using <a href="https://docs.aws.amazon.com/lambda/latest/dg/services-vpc-lattice.html" target="_blank">VPC Lattice</a>, you must have a service network configured to invoke your Lambda function.</p>
 <p>This is the sample infrastructure for API Gateway and Lambda Function URLs we are using for the examples in this documentation.</p>
@@ -2526,7 +2527,7 @@ return a 200 OK HTTP status. You can optionally set a different HTTP status code
 <summary>Note</summary>
 <p>We recommend having explicit routes whenever possible; use catch-all routes sparingly.</p>
 </details>
-<p>You can use a <a href="https://docs.python.org/3/library/re.html#regular-expression-syntax" target="_blank">regex</a> string to handle an arbitrary number of paths within a request, for example <code>.+</code>.</p>
+<p>You can use a <a href="https://docs.python.org/3/library/re.html#regular-expression-syntax" rel="nofollow" target="_blank">regex</a> string to handle an arbitrary number of paths within a request, for example <code>.+</code>.</p>
 <p>You can also combine nested paths with greedy regex to catch in between routes.</p>
 <details class="warning" open="open">
 <summary>Warning</summary>
@@ -3517,32 +3518,32 @@ matches one of the allowed values.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin" target="_blank">allow_origin</a></strong>: <code>str</code></td>
+<td><strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin" rel="nofollow" target="_blank">allow_origin</a></strong>: <code>str</code></td>
 <td><code>*</code></td>
 <td>Only use the default value for development. <strong>Never use <code>*</code> for production</strong> unless your use case requires it</td>
 </tr>
 <tr>
-<td><strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin" target="_blank">extra_origins</a></strong>: <code>List[str]</code></td>
+<td><strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin" rel="nofollow" target="_blank">extra_origins</a></strong>: <code>List[str]</code></td>
 <td><code>[]</code></td>
 <td>Additional origins to be allowed, in addition to the one specified in <code>allow_origin</code></td>
 </tr>
 <tr>
-<td><strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers" target="_blank">allow_headers</a></strong>: <code>List[str]</code></td>
+<td><strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers" rel="nofollow" target="_blank">allow_headers</a></strong>: <code>List[str]</code></td>
 <td><code>[Authorization, Content-Type, X-Amz-Date, X-Api-Key, X-Amz-Security-Token]</code></td>
 <td>Additional headers will be appended to the default list for your convenience</td>
 </tr>
 <tr>
-<td><strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers" target="_blank">expose_headers</a></strong>: <code>List[str]</code></td>
+<td><strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers" rel="nofollow" target="_blank">expose_headers</a></strong>: <code>List[str]</code></td>
 <td><code>[]</code></td>
-<td>Any additional header beyond the <a href="https://developer.mozilla.org/en-US/docs/Glossary/CORS-safelisted_response_header" target="_blank">safe listed by CORS specification</a>.</td>
+<td>Any additional header beyond the <a href="https://developer.mozilla.org/en-US/docs/Glossary/CORS-safelisted_response_header" rel="nofollow" target="_blank">safe listed by CORS specification</a>.</td>
 </tr>
 <tr>
-<td><strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age" target="_blank">max_age</a></strong>: <code>int</code></td>
+<td><strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age" rel="nofollow" target="_blank">max_age</a></strong>: <code>int</code></td>
 <td>``</td>
 <td>Only for pre-flight requests if you choose to have your function to handle it instead of API Gateway</td>
 </tr>
 <tr>
-<td><strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials" target="_blank">allow_credentials</a></strong>: <code>bool</code></td>
+<td><strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials" rel="nofollow" target="_blank">allow_credentials</a></strong>: <code>bool</code></td>
 <td><code>False</code></td>
 <td>Only necessary when you need to expose cookies, authorization headers or TLS client certificates.</td>
 </tr>
@@ -5230,7 +5231,7 @@ your development, building, deployment tooling need to accommodate the distinct 
 <h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
 <p><strong>What's the difference between this utility and frameworks like Chalice?</strong></p>
 <p>Chalice is a full featured microframework that manages application and infrastructure. This utility, however, is largely focused on routing to reduce boilerplate and expects you to setup and manage infrastructure with your framework of choice.</p>
-<p>That said, <a href="https://aws.github.io/chalice/topics/middleware.html" target="_blank">Chalice has native integration with Lambda Powertools</a> if you're looking for a more opinionated and web framework feature set.</p>
+<p>That said, <a href="https://aws.github.io/chalice/topics/middleware.html" rel="nofollow" target="_blank">Chalice has native integration with Lambda Powertools</a> if you're looking for a more opinionated and web framework feature set.</p>
 <p><strong>What happened to <code>ApiGatewayResolver</code>?</strong></p>
 <p>It's been superseded by more explicit resolvers like <code>APIGatewayRestResolver</code>, <code>APIGatewayHttpResolver</code>, and <code>ALBResolver</code>.</p>
 <p><code>ApiGatewayResolver</code> handled multiple types of event resolvers for convenience via <code>proxy_type</code> param. However,
@@ -5243,7 +5244,7 @@ it made it impossible for static checkers like Mypy and IDEs IntelliSense to kno
   <small>
     
       Last update:
-      2023-06-28
+      2023-07-28
     
   </small>
 </div>

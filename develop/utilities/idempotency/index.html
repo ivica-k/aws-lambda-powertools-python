@@ -19,7 +19,7 @@
         <link rel="next" href="../feature_flags/">
       
       <link rel="icon" href="../../media/aws-logo-light.svg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
@@ -1657,7 +1657,7 @@
 </table>
 <details class="tip" open="open">
 <summary>Tip: You can share a single state table for all functions</summary>
-<p>You can reuse the same DynamoDB table to store idempotency state. We add <code>module_name</code> and <a href="https://peps.python.org/pep-3155/" target="_blank">qualified name for classes and functions</a> in addition to the idempotency key as a hash key.</p>
+<p>You can reuse the same DynamoDB table to store idempotency state. We add <code>module_name</code> and <a href="https://peps.python.org/pep-3155/" rel="nofollow" target="_blank">qualified name for classes and functions</a> in addition to the idempotency key as a hash key.</p>
 </details>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">AWS Serverless Application Model (SAM) example</label><label for="__tabbed_1_2">AWS Cloud Development Kit (CDK)</label><label for="__tabbed_1_3">Terraform</label></div>
 <div class="tabbed-content">
@@ -2060,7 +2060,7 @@ estimate the cost.</p>
 <p>Similar to <a href="#idempotent-decorator">idempotent decorator</a>, you can use <code>idempotent_function</code> decorator for any synchronous Python function.</p>
 <p>When using <code>idempotent_function</code>, you must tell us which keyword parameter in your function signature has the data we should use via <strong><code>data_keyword_argument</code></strong>.</p>
 <div class="admonition tip">
-<p class="admonition-title">We support JSON serializable data, <a href="https://docs.python.org/3.7/library/dataclasses.html" target="_blank">Python Dataclasses</a>, <a href="../parser/" target="_blank">Parser/Pydantic Models</a>, and our <a href="../data_classes/" target="_blank">Event Source Data Classes</a>.</p>
+<p class="admonition-title">We support JSON serializable data, <a href="https://docs.python.org/3.7/library/dataclasses.html" rel="nofollow" target="_blank">Python Dataclasses</a>, <a href="../parser/" target="_blank">Parser/Pydantic Models</a>, and our <a href="../data_classes/" target="_blank">Event Source Data Classes</a>.</p>
 </div>
 <details class="warning" open="open">
 <summary>Limitation</summary>
@@ -3037,7 +3037,7 @@ This means that new invocations will execute your code again despite having the 
 <tr>
 <td><strong>hash_function</strong></td>
 <td><code>md5</code></td>
-<td>Function to use for calculating hashes, as provided by <a href="https://docs.python.org/3/library/hashlib.html" target="_blank">hashlib</a> in the standard library.</td>
+<td>Function to use for calculating hashes, as provided by <a href="https://docs.python.org/3/library/hashlib.html" rel="nofollow" target="_blank">hashlib</a> in the standard library.</td>
 </tr>
 </tbody>
 </table>
@@ -3379,6 +3379,7 @@ This means that new invocations will execute your code again despite having the 
 </div>
 </div>
 <h3 id="customizing-boto-configuration">Customizing boto configuration<a class="headerlink" href="#customizing-boto-configuration" title="Permanent link">&para;</a></h3>
+<!-- markdownlint-disable-next-line MD013 -->
 <p>The <strong><code>boto_config</code></strong> and <strong><code>boto3_session</code></strong> parameters enable you to pass in a custom <a href="https://botocore.amazonaws.com/v1/documentation/api/latest/reference/config.html" target="_blank">botocore config object</a> or a custom <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/reference/core/session.html" target="_blank">boto3 session</a> when constructing the persistence store.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="13:3"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><input id="__tabbed_13_3" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Custom session</label><label for="__tabbed_13_2">Custom config</label><label for="__tabbed_13_3">Sample Event</label></div>
 <div class="tabbed-content">
@@ -4028,7 +4029,7 @@ event - not the "raw" event Lambda was invoked with.</p>
 <p>The idempotency utility provides several routes to test your code.</p>
 <h3 id="disabling-the-idempotency-utility">Disabling the idempotency utility<a class="headerlink" href="#disabling-the-idempotency-utility" title="Permanent link">&para;</a></h3>
 <p>When testing your code, you may wish to disable the idempotency logic altogether and focus on testing your business logic. To do this, you can set the environment variable <code>POWERTOOLS_IDEMPOTENCY_DISABLED</code>
-with a truthy value. If you prefer setting this for specific tests, and are using Pytest, you can use <a href="https://docs.pytest.org/en/latest/monkeypatch.html" target="_blank">monkeypatch</a> fixture:</p>
+with a truthy value. If you prefer setting this for specific tests, and are using Pytest, you can use <a href="https://docs.pytest.org/en/latest/monkeypatch.html" rel="nofollow" target="_blank">monkeypatch</a> fixture:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">test_disabling_idempotency_utility.py</label><label for="__tabbed_17_2">app_test_disabling_idempotency_utility.py</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -4345,7 +4346,7 @@ This means it is possible to pass a mocked Table resource, or stub various metho
   <small>
     
       Last update:
-      2023-06-26
+      2023-07-28
     
   </small>
 </div>

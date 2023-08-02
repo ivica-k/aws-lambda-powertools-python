@@ -19,7 +19,7 @@
         <link rel="next" href="../security/">
       
       <link rel="icon" href="../media/aws-logo-light.svg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
@@ -1363,7 +1363,7 @@
 <details class="tip" open="open">
 <summary>Tip: Want to skip to the final project?</summary>
 <p>Bootstrap directly via SAM CLI:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sam<span class="w"> </span>init<span class="w"> </span>--app-template<span class="w"> </span>hello-world-powertools-python<span class="w"> </span>--name<span class="w"> </span>sam-app<span class="w"> </span>--package-type<span class="w"> </span>Zip<span class="w"> </span>--runtime<span class="w"> </span>python3.11<span class="w"> </span>--no-tracing<span class="sb">`</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sam<span class="w"> </span>init<span class="w"> </span>--app-template<span class="w"> </span>hello-world-powertools-python<span class="w"> </span>--name<span class="w"> </span>sam-app<span class="w"> </span>--package-type<span class="w"> </span>Zip<span class="w"> </span>--runtime<span class="w"> </span>python3.11<span class="w"> </span>--no-tracing
 </code></pre></div></td></tr></table></div>
 </details>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Use SAM CLI to initialize the sample project</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sam<span class="w"> </span>init<span class="w"> </span>--runtime<span class="w"> </span>python3.11<span class="w"> </span>--dependency-manager<span class="w"> </span>pip<span class="w"> </span>--app-template<span class="w"> </span>hello-world<span class="w"> </span>--name<span class="w"> </span>powertools-quickstart
@@ -1469,7 +1469,7 @@
 ...
 <span class="m">2021</span>-11-26<span class="w"> </span><span class="m">17</span>:43:08<span class="w">  </span>*<span class="w"> </span>Running<span class="w"> </span>on<span class="w"> </span>http://127.0.0.1:3000/<span class="w"> </span><span class="o">(</span>Press<span class="w"> </span>CTRL+C<span class="w"> </span>to<span class="w"> </span>quit<span class="o">)</span>
 </code></pre></div></td></tr></table></div>
-<p>As a result, a local API endpoint will be exposed and you can invoke it using your browser, or your preferred HTTP API client e.g., <a href="https://www.postman.com/downloads/" target="_blank">Postman</a>, <a href="https://httpie.io/" target="_blank">httpie</a>, etc.</p>
+<p>As a result, a local API endpoint will be exposed and you can invoke it using your browser, or your preferred HTTP API client e.g., <a href="https://www.postman.com/downloads/" rel="nofollow" target="_blank">Postman</a>, <a href="https://httpie.io/" rel="nofollow" target="_blank">httpie</a>, etc.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Invoking our function locally via curl</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&gt;<span class="w"> </span>curl<span class="w"> </span>http://127.0.0.1:3000/hello
 <span class="o">{</span><span class="s2">&quot;message&quot;</span>:<span class="w"> </span><span class="s2">&quot;hello unknown!&quot;</span><span class="o">}</span>
@@ -1847,14 +1847,14 @@ Successfully<span class="w"> </span>created/updated<span class="w"> </span>stack
 <p>Use <code>sam build &amp;&amp; sam local start-api</code> and try run it locally again.</p>
 <details class="note" open="open">
 <summary>Note</summary>
-<p>If you're coming from <a href="https://flask.palletsprojects.com/en/2.0.x/" target="_blank">Flask</a>, you will be familiar with this experience already. <a href="../core/event_handler/api_gateway/" target="_blank">Event Handler for API Gateway</a> uses <code>APIGatewayRestResolver</code> to give a Flask-like experience while staying true to our tenet <code>Keep it lean</code>.</p>
+<p>If you're coming from <a href="https://flask.palletsprojects.com/en/2.0.x/" rel="nofollow" target="_blank">Flask</a>, you will be familiar with this experience already. <a href="../core/event_handler/api_gateway/" target="_blank">Event Handler for API Gateway</a> uses <code>APIGatewayRestResolver</code> to give a Flask-like experience while staying true to our tenet <code>Keep it lean</code>.</p>
 </details>
 <p>We have added the route annotation as the decorator for our methods. It enables us to use the parameters passed in the request directly, and our responses are simply dictionaries.</p>
 <p>Lastly, we used <code>return app.resolve(event, context)</code> so Event Handler can resolve routes, inject the current request, handle serialization, route validation, etc.</p>
 <p>From here, we could handle <a href="../core/event_handler/api_gateway/#handling-not-found-routes" target="_blank">404 routes</a>, <a href="../core/event_handler/api_gateway/#exception-handling" target="_blank">error handling</a>, <a href="../core/event_handler/api_gateway/#accessing-request-details" target="_blank">access query strings, payload</a>, etc.</p>
 <details class="tip" open="open">
 <summary>Tip</summary>
-<p>If you'd like to learn how python decorators work under the hood, you can follow <a href="https://realpython.com/primer-on-python-decorators/" target="_blank">Real Python</a>'s article.</p>
+<p>If you'd like to learn how python decorators work under the hood, you can follow <a href="https://realpython.com/primer-on-python-decorators/" rel="nofollow" target="_blank">Real Python</a>'s article.</p>
 </details>
 <h2 id="structured-logging">Structured Logging<a class="headerlink" href="#structured-logging" title="Permanent link">&para;</a></h2>
 <p>Over time, you realize that searching logs as text results in poor observability, it's hard to create metrics from, enumerate common exceptions, etc.</p>
@@ -2056,6 +2056,7 @@ python-json-logger
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>We can now search our logs by the request ID to find a specific operation. Additionally, we can also search our logs for function name, Lambda request ID, Lambda function ARN, find out whether an operation was a cold start, etc.</p>
+<!-- markdownlint-disable-next-line MD013 -->
 <p>From here, we could <a href="../core/logger/#append_keys-method" target="_blank">set specific keys</a> to add additional contextual information about a given operation, <a href="../core/logger/#logging-exceptions" target="_blank">log exceptions</a> to easily enumerate them later, <a href="../core/logger/#sampling-debug-logs" target="_blank">sample debug logs</a>, etc.</p>
 <p>By having structured logs like this, we can easily search and analyse them in <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AnalyzingLogData.html" target="_blank">CloudWatch Logs Insight</a>.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">CloudWatch Logs Insight Example</label></div>
@@ -2447,6 +2448,7 @@ aws-xray-sdk
 <h2 id="custom-metrics">Custom Metrics<a class="headerlink" href="#custom-metrics" title="Permanent link">&para;</a></h2>
 <h3 id="creating-metrics">Creating metrics<a class="headerlink" href="#creating-metrics" title="Permanent link">&para;</a></h3>
 <p>Let's add custom metrics to better understand our application and business behavior (e.g. number of reservations, etc.).</p>
+<!-- markdownlint-disable-next-line MD013 -->
 <p>By default, AWS Lambda adds <a href="https://docs.aws.amazon.com/lambda/latest/dg/monitoring-metrics.html#monitoring-metrics-types" target="_blank">invocation and performance metrics</a>, and Amazon API Gateway adds <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-metrics-and-dimensions.html#api-gateway-metrics" target="_blank">latency and some HTTP metrics</a>.</p>
 <details class="tip" open="open">
 <summary>Tip</summary>
@@ -2778,7 +2780,7 @@ aws-xray-sdk
 <li><strong>L33</strong>: We use <code>@metrics.log_metrics</code> decorator to ensure that our metrics are aligned with the EMF output and validated before-hand, like in case we forget to set namespace, or accidentally use a metric unit as a string that doesn't exist in CloudWatch.</li>
 <li><strong>L33</strong>: We also use <code>capture_cold_start_metric=True</code> so we don't have to handle that logic either. Note that <a href="../core/metrics/" target="_blank">Metrics</a> does not publish a warm invocation metric (ColdStart=0) for cost reasons. As such, treat the absence (sparse metric) as a non-cold start invocation.</li>
 </ul>
-<p>Repeat the process of building, deploying, and invoking your application via the API endpoint a few times to generate metrics - <a href="https://www.artillery.io/" target="_blank">Artillery</a> and <a href="https://k6.io/open-source" target="_blank">K6.io</a> are quick ways to generate some load.</p>
+<p>Repeat the process of building, deploying, and invoking your application via the API endpoint a few times to generate metrics - <a href="https://www.artillery.io/" rel="nofollow" target="_blank">Artillery</a> and <a href="https://k6.io/open-source" rel="nofollow" target="_blank">K6.io</a> are quick ways to generate some load.</p>
 <p>Within <a href="https://console.aws.amazon.com/cloudwatch/home#metricsV2:graph=~()" target="&quot;_blank">CloudWatch Metrics view</a>, you should see <code>MyApp</code> custom namespace with your custom metrics there and <code>SuccessfulGreetings</code> available to graph.</p>
 <p><img alt="Custom Metrics Example" src="../media/metrics_utility_showcase.png" /></p>
 <p>If you're curious about how the EMF portion of your function logs look like, you can quickly go to <a href="https://console.aws.amazon.com/cloudwatch/home#servicelens:service-map/map" target="_blank">CloudWatch ServiceLens view</a>, choose your function and open logs. You will see a similar entry that looks like this:</p>
@@ -2838,6 +2840,7 @@ aws-xray-sdk
 </code></pre></div></td></tr></table></div>
 <h2 id="final-considerations">Final considerations<a class="headerlink" href="#final-considerations" title="Permanent link">&para;</a></h2>
 <p>We covered a lot of ground here and we only scratched the surface of the feature set available within Powertools for AWS Lambda (Python).</p>
+<!-- markdownlint-disable-next-line MD013 -->
 <p>When it comes to the observability features (<a href="../core/tracer/" target="_blank">Tracer</a>, <a href="../core/metrics/" target="_blank">Metrics</a>, <a href="../core/logger/" target="_blank">Logging</a>), don't stop there! The goal here is to ensure you can ask arbitrary questions to assess your system's health; these features are only part of the wider story!</p>
 <p>This requires a change in mindset to ensure operational excellence is part of the software development lifecycle.</p>
 <details class="tip" open="open">
@@ -2855,7 +2858,7 @@ aws-xray-sdk
   <small>
     
       Last update:
-      2023-07-24
+      2023-07-28
     
   </small>
 </div>

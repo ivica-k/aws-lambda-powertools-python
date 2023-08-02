@@ -19,7 +19,7 @@
         <link rel="next" href="../logger/">
       
       <link rel="icon" href="../../media/aws-logo-light.svg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
@@ -1260,7 +1260,7 @@
 
   <h1>Tracer</h1>
 
-<p>Tracer is an opinionated thin wrapper for <a href="https://github.com/aws/aws-xray-sdk-python/" target="_blank">AWS X-Ray Python SDK</a>.</p>
+<p>Tracer is an opinionated thin wrapper for <a href="https://github.com/aws/aws-xray-sdk-python/" rel="nofollow" target="_blank">AWS X-Ray Python SDK</a>.</p>
 <p><img alt="Tracer showcase" src="../../media/tracer_utility_showcase.png" /></p>
 <h2 id="key-features">Key features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1275,7 +1275,7 @@
 <p>All examples shared in this documentation are available within the <a href="https://github.com/aws-powertools/powertools-lambda-python/tree/develop/examples" target="_blank">project repository</a>.</p>
 </details>
 <div class="admonition note">
-<p class="admonition-title">Tracer relies on AWS X-Ray SDK over <a href="https://aws-otel.github.io/docs/getting-started/lambda" target="_blank">OpenTelememetry Distro (ADOT)</a> for optimal cold start (lower latency).</p>
+<p class="admonition-title">Tracer relies on AWS X-Ray SDK over <a href="https://aws-otel.github.io/docs/getting-started/lambda" rel="nofollow" target="_blank">OpenTelememetry Distro (ADOT)</a> for optimal cold start (lower latency).</p>
 </div>
 <h3 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
@@ -1321,7 +1321,7 @@
 </span><span class="w">    </span><span class="nt">Layers</span><span class="p">:</span>
 <span class="w">      </span><span class="c1"># Find the latest Layer version in the official documentation</span>
 <span class="w">      </span><span class="c1"># https://docs.powertools.aws.dev/lambda/python/latest/#lambda-layer</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="kt">!Sub</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">arn:aws:lambda:${AWS::Region}:017000801446:layer:AWSLambdaPowertoolsPythonV2:39</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="kt">!Sub</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">arn:aws:lambda:${AWS::Region}:017000801446:layer:AWSLambdaPowertoolsPythonV2:40</span>
 
 <span class="nt">Resources</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">CaptureLambdaHandlerExample</span><span class="p">:</span>
@@ -1921,7 +1921,7 @@ side effects for file-like objects like boto S3 <a href="https://botocore.amazon
 <summary>Info</summary>
 <p>This snippet assumes you have aiohttp as a dependency</p>
 </details>
-<p>You can use <code>aiohttp_trace_config</code> function to create a valid <a href="https://docs.aiohttp.org/en/stable/tracing_reference.html" target="_blank">aiohttp trace_config object</a>. This is necessary since X-Ray utilizes <a href="https://docs.aiohttp.org/en/stable/" target="_blank">aiohttp</a> trace hooks to capture requests end-to-end.</p>
+<p>You can use <code>aiohttp_trace_config</code> function to create a valid <a href="https://docs.aiohttp.org/en/stable/tracing_reference.html" rel="nofollow" target="_blank">aiohttp trace_config object</a>. This is necessary since X-Ray utilizes <a href="https://docs.aiohttp.org/en/stable/" rel="nofollow" target="_blank">aiohttp</a> trace hooks to capture requests end-to-end.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Tracing aiohttp requests</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2152,7 +2152,7 @@ side effects for file-like objects like boto S3 <a href="https://botocore.amazon
   <small>
     
       Last update:
-      2023-06-19
+      2023-07-28
     
   </small>
 </div>
